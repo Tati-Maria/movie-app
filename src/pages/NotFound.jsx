@@ -1,6 +1,7 @@
 import React from 'react'
 import {BsEmojiFrown} from "react-icons/bs"
 import { Link } from 'react-router-dom';
+
 const NotFound = () => {
   return (
     <div className='font-nunito min-h-screen flex flex-col items-center justify-center gap-6'>

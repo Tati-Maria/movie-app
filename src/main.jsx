@@ -6,6 +6,7 @@ import Search from './pages/Search';
 import Movie from './pages/Movie';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './index.css'
+import NotFound from './pages/NotFound';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<Home />} />
         <Route path='/movie/:id' element={<Movie />} />
         <Route path='search' element={<Search />} />
+        <Route path='*' element={<NotFound />} />
       </Route>
     </Routes> 
     </BrowserRouter>
