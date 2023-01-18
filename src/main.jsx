@@ -19,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='search' element={<Search />} />
         <Route path='*' element={<NotFound />} />
       </Route>
+      <Route path='*' element={<NotFound />} />
     </Routes> 
     </BrowserRouter>
   </React.StrictMode>,
