@@ -57,7 +57,7 @@ const Movies = () => {
             <MovieCard movie={movie} showLink={false} />
             </div>
             <div className='flex flex-col gap-6'>
-              <p className='font-semibold text-xl'>{movie.tagline}</p>
+              <p className='font-semibold text-xl text-center'>{movie.tagline}</p>
               <div className='flex items-center flex-row gap-5 md:flex-col md:items-start'>
                 <h3>
                   <span className='font-semibold text-lg'>Genre:</span>
