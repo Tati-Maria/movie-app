@@ -23,7 +23,6 @@ const Movies = () => {
     setLoading(true);
     try {
       const response = await axios.get(url);
-      console.log(response.data)
       setMovie(response.data);
 
     } catch(err) {
