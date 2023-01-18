@@ -59,8 +59,8 @@ const Movies = () => {
             <div className='flex flex-col gap-6'>
               <p className='font-semibold text-xl text-center'>{movie.tagline}</p>
               <div className='flex items-center flex-row gap-5 md:flex-col md:items-start'>
-                <h3>
-                  <span className='font-semibold text-lg'>Genre:</span>
+                <h3 className='font-semibold text-lg'>
+                  Genre:
                 </h3>
                 <p className='flex items-center gap-5 flex-wrap'>
                   {movie.genres.map(mov =>
