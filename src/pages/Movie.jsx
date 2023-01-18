@@ -35,7 +35,7 @@ const Movies = () => {
   useEffect(() => {
     const movieUrl = `${moviesURL}${id}?${apiKey}`;
     getMovieDetails(movieUrl)
-  }, []);
+  }, [movie]);
 
   const formatCurrency = (number) => {
     return number.toLocaleString("pt-PT", {
