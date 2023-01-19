@@ -14,7 +14,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div>
-                    <p>Made by <a href="https://github.com/Tati-Maria" className='underline text-red-500'>Maria</a></p>
+                    <p>Made by <a href="https://github.com/Tati-Maria/movie-app" target="_blank" className='underline text-red-500'>Maria</a></p>
                 </div>
                 <div>
                 <a 
