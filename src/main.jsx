@@ -4,23 +4,35 @@ import App from './App';
 import Home from "./pages/Home";
 import Search from './pages/Search';
 import Movie from './pages/Movie';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import './index.css'
 import NotFound from './pages/NotFound';
+
+const router = createBrowserRouter([
+  {
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/movie/:id",
+        element: <Movie />
+      },
+      {
+        path: "search",
+        element: <Search />
+      }
+    ],
+  },
+
+])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-      <Route element={<App />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/movie/:id' element={<Movie />} />
-        <Route path='search' element={<Search />} />
-        <Route path='*' element={<NotFound />} />
-      </Route>
-      <Route path='*' element={<NotFound />} />
-    </Routes> 
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

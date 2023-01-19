@@ -3,6 +3,7 @@ import axios from "axios";
 
 export default function useFetchData (url) {
     const [data, setData] = useState([]);
+    const [details, setDetails] = useState(null)
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -11,6 +12,8 @@ export default function useFetchData (url) {
         try {
             const response = await axios.get(url);
             setData(response.data.results);
+            setDetails(response.data);
+            console.log(response.data)
         } catch(err) {
             setError(err);
         }
@@ -22,5 +25,5 @@ export default function useFetchData (url) {
         getData()
     }, [url]);
 
-    return {data, loading, error}
+    return {data, loading, error, details}
 }

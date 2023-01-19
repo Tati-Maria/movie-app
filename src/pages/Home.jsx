@@ -2,11 +2,13 @@ import Loader from "../components/Loader";
 import MovieCard from "../components/MovieCard";
 import useFetchData from "../hooks/useFetchData";
 import usePagination from "../hooks/usePagination";
+import { useLoaderData } from "react-router-dom";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Home = () => {
+    
     const {data, loading, error} = useFetchData(`${moviesURL}popular?${apiKey}`)
     const {paginatedData, currentPage, handlePageChange} = usePagination(data, 10)
 
@@ -40,6 +42,11 @@ const Home = () => {
     
     </section>
   )
+}
+
+//loader data
+export const moviesLoader = () => {
+
 }
 
 export default Home;
