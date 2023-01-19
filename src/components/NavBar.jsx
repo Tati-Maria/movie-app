@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <nav className='py-2 bg-gray-900'>
       <div className='mx-auto max-w-5xl p-4 flex justify-between items-center flex-col gap-4 sm:gap-0 sm:flex-row'>
-        <h2 className='text-3xl font-extrabold'>
+        <h2 className='text-4xl font-extrabold'>
           <NavLink to={"/"} className="flex items-center gap-2" >
             <FcFilmReel />
             <span className='text-white'>Popular<span className='text-red-600'>Mov</span></span>
