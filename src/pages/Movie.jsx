@@ -5,7 +5,6 @@ import {BsGraphUp,
   BsCalendar2Day
 } from "react-icons/bs";
 import MovieCard from '../components/MovieCard';
-import { useEffect, useState } from 'react';
 import useFetchData from '../hooks/useFetchData';
 
 const moviesURL = import.meta.env.VITE_API;
@@ -13,7 +12,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 const Movies = () => {
   const {id} = useParams();
-  const {details, error, loading} = useFetchData(`${moviesURL}${id}?${apiKey}`);
+  const {details, loading} = useFetchData(`${moviesURL}${id}?${apiKey}`);
 
   const formatCurrency = (number) => {
     return number.toLocaleString("pt-PT", {

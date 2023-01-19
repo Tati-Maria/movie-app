@@ -10,7 +10,7 @@ const apiKey =  import.meta.env.VITE_API_KEY;
 const Search = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q");
-  const {data, loading, error} = useFetchData(`${searchUrl}?${apiKey}&query=${query}`);
+  const {data, loading} = useFetchData(`${searchUrl}?${apiKey}&query=${query}`);
   const {paginatedData, currentPage, handlePageChange} = usePagination(data, 10)
 
   const lastPage = Math.ceil(data.length / 10);
